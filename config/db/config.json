@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "chuckitdb",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging":false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "b8984c452efa4a",
+    "password": "0ea24b18",
+    "database": "heroku_f8ff56462b848ef",
+    "host":"us-cdbr-iron-east-05.cleardb.net",
+    "dialect": "mysql"
+  }
+}
