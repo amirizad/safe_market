@@ -7,10 +7,14 @@ import {Provider} from 'react-redux';
 import store from './store';
 
 //import Main App
-import Main from './App';
+import Routing from './routes/routes_container';
 
 render(
     <Provider store={store}>
-       <Main />
+       <Routing />
      </Provider>
 , window.document.getElementById('app'));
+
+if(module.hot){
+  module.hot.accept();
+}
