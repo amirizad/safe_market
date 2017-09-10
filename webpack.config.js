@@ -1,11 +1,12 @@
 'use strict';
 
-var path = require("path");
+const path = require("path");
+const webpack = require('webpack');
 
-var DIST_DIR = path.resolve(__dirname, "public");
-var SRC_DIR = path.resolve(__dirname, "dev");
+const DIST_DIR = path.resolve(__dirname, "public");
+const SRC_DIR = path.resolve(__dirname, "dev");
 
-var config = {
+const config = {
     entry: SRC_DIR + "/app/index.js",
     output: {
         path: DIST_DIR + "/app",
@@ -27,6 +28,21 @@ var config = {
                 }
             }
         ]
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+          'process.env': {
+            'NODE_ENV': JSON.stringify('production')
+          }
+        })
+    ],
+    devServer: {
+        proxy: {
+            '/api': {
+                secure: false,
+                target: 'http://localhost:3000',
+            }
+        }
     }
 };
 

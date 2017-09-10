@@ -8,6 +8,8 @@ const path = require("path");
 const db = require('./models');
 const methodOverride = require("method-override");
 const request = require('request');
+const twilio = require('twilio');
+const logger = require("morgan");
 
 // Authentication Dependencies
 // =============================================================
@@ -19,19 +21,30 @@ const MySQLStore = require('express-mysql-session')(session);
 const bcrypt = require('bcrypt');
 const flash = require('connect-flash');
 
+//Set up text messenger
+const SMS = new twilio("PN61ff35770737dd91dd9775829e0b1c91","4ff4866710e85ec36be256c55fbd4335");
+
 // Sets up the Express App
 // =============================================================
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+//Real-Time package manager
+//==============================================================
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+
+//Routes
+//==============================================================
 const index = require('./routes/html-routes.js')(express,passport,db,bcrypt,path);
-const API = require('./routes/api-routes.js')(express,passport,db,bcrypt,request);
+const API = require('./routes/api-routes.js')(express,passport,db,bcrypt,request,SMS,io);
 
 //Used to create the sessions table for authentication
 const sessionStore = (process.env.PORT ? new MySQLStore({
     host:'us-cdbr-iron-east-05.cleardb.net',
-    user:'b8984c452efa4a',
-    password:'0ea24b18',
-    database:'heroku_f8ff56462b848ef'
+    user:'b4f73d2b784917',
+    password:'a5f3703a',
+    database:'heroku_d97e12e6d4f9baa'
 }) : new MySQLStore({
     host:'localhost',
     port:'3306',
@@ -43,7 +56,7 @@ const sessionStore = (process.env.PORT ? new MySQLStore({
 
 // START Configuring Express App
 // ========================================================================================
-
+app.use(logger("dev"));
 // Sets up the Express app to handle data & cookie parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -90,9 +103,11 @@ app.use(function(error, req, res) {
     res.status(500).send('500: Internal Server Error');
 });
 
+
 // Starts DB and start listening to the server port
-db.sequelize.sync({force:true}).then(()=>{
-    app.listen(PORT,()=>{
+db.sequelize.sync().then(()=>{
+    server.listen(PORT,()=>{
         console.log('SERVER STARTED ON PORT ' + PORT);
     });
 });
+
