@@ -10,6 +10,11 @@ module.exports = (express,passport,db,bcrypt,path)=>{
         .get((req,res,next)=>{
             res.sendFile(path.join(__dirname,'../public/index.html'));
         });
+    
+    router.route('/login')
+        .get((req,res,next)=>{
+            res.send('done');
+        });
 
     return router;
 };
