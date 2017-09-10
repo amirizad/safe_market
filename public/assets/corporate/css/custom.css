@@ -1,1 +1,350 @@
 /* here you can put your own css to customize and override the theme */
+
+li.menu-search {
+    max-width: 85%;
+}
+
+input.form-control {
+    margin-right: 10px;
+}
+
+input.form-control {
+    height: 35px;
+}
+
+select.btn.dropdown-toggle {
+    border: solid 1px;
+    border-color: lightgray;
+}
+
+img#logo {
+    width: 145px;
+}
+
+.item.active {
+    height: 702px;
+}
+
+.carousel-slider .carousel-position-four {
+    left: 53px;
+    right: auto;
+}
+
+#login-overlay .modal-content {
+    width: 50%;
+    position: relative;
+    left: 27%;
+    top: 25%;
+}
+
+div#login-overlay {
+    position: fixed;
+    top: -30px;
+    width: 100%;
+    z-index: 999;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.register{
+    top: 16%;
+}
+
+input#term {
+    width: 53%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* My Listings custom css */
+/* .offers-goods, .messages-goods {
+    float:left;
+    
+} */
+.offers-goods, .messages-goods {
+	width: 22px;
+	height: 22px;
+	color: #fff !important;
+	border-radius: 22px !important;
+	float: right;
+	margin:0px;
+	line-height: 1;
+	font-size: 12px;
+}
+
+.offers-goods:hover, .messages-goods:hover {
+	text-decoration: none;
+}
+
+.offers-goods, .messages-goods {
+    background: #36F320 url(../../pages/img/icons/search-icon.png) no-repeat 50% 50%;
+    color: white;
+}
+.offers-goods:hover, .messages-goods:hover {
+	background: #ED8B05 url(../../pages/img/icons/search-icon.png) no-repeat 50% 50%;
+}
+
+/*Message Preview */
+.panel{
+    margin-bottom: 0;
+    border-bottom: none;
+}
+.open>.dropdown-menu{
+    width: 500px;
+    padding-top: 0;
+    margin-top: 10px;
+}
+.panel-heading{ 
+    background-color: #e94d1c !important;
+    color: white !important;
+}
+.panel-body{
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    height: 400px;
+    width:100%;
+}
+.panel-default{
+    width:100%;
+}
+.message-bubble {
+    padding: 10px 0 10px 0;
+}
+.message-bubble, .message-bubble-user1
+{
+    padding-left: 10px;    
+}
+hr{
+    width: 100%;
+    margin: 0 !important;
+}
+.all-messages-button{
+text-align: center;
+width: 100%;
+border: none;
+background: #f5f5f5;
+}
+.all-messages-button:hover{
+    background: #f5f5f5;
+}
+
+.header-navigation {
+    width: 740px;
+}
+
+.itemText {
+    margin-left: 85px;
+}
+
+#noMessages {
+    text-align: center;
+    margin-top: 160px;
+}
+
+.message-bubble:hover {
+    background-color: lightyellow;
+}
+
+
+.portlet {
+    margin-bottom: 0px;
+}
+
+.btn-white {
+    border-color: #cccccc;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.portlet {
+    border: 1px solid;
+}
+
+.portlet .portlet-heading {
+    padding: 0 15px;
+}
+
+.portlet .portlet-heading h4 {
+    padding: 1px 0;
+    font-size: 16px;
+}
+
+.portlet .portlet-heading a {
+    color: #fff;
+}
+
+.portlet .portlet-heading a:hover,
+.portlet .portlet-heading a:active,
+.portlet .portlet-heading a:focus {
+    outline: none;
+}
+
+.portlet .portlet-widgets .dropdown-menu a {
+    color: #333;
+}
+
+.portlet .portlet-widgets ul.dropdown-menu {
+    min-width: 0;
+}
+
+.portlet .portlet-heading .portlet-title {
+    float: left;
+}
+
+.portlet .portlet-heading .portlet-title h4 {
+    margin: 10px 0;
+}
+
+.portlet .portlet-heading .portlet-widgets {
+    float: right;
+    margin: 8px 0;
+}
+
+.portlet .portlet-heading .portlet-widgets .tabbed-portlets {
+    display: inline;
+}
+
+.portlet .portlet-heading .portlet-widgets .divider {
+    margin: 0 5px;
+}
+
+.portlet .portlet-body {
+    padding: 15px;
+    background: #fff;
+}
+
+.portlet .portlet-footer {
+    padding: 10px 15px;
+    background: #e0e7e8;
+}
+
+.portlet .portlet-footer ul {
+    margin: 0;
+}
+
+.portlet-green,
+.portlet-green>.portlet-heading {
+    border-color: #16a085;
+}
+
+.portlet-green>.portlet-heading {
+    color: #fff;
+    background-color: #16a085;
+}
+
+.portlet-orange,
+.portlet-orange>.portlet-heading {
+    border-color: #f39c12;
+}
+
+.portlet-orange>.portlet-heading {
+    color: #fff;
+    background-color: #f39c12;
+}
+
+.portlet-blue,
+.portlet-blue>.portlet-heading {
+    border-color: #2980b9;
+}
+
+.portlet-blue>.portlet-heading {
+    color: #fff;
+    background-color: #2980b9;
+}
+
+.portlet-red,
+.portlet-red>.portlet-heading {
+    border-color: #e74c3c;
+}
+
+.portlet-red>.portlet-heading {
+    color: #fff;
+    background-color: #e74c3c;
+}
+
+.portlet-purple,
+.portlet-purple>.portlet-heading {
+    border-color: #8e44ad;
+}
+
+.portlet-purple>.portlet-heading {
+    color: #fff;
+    background-color: #8e44ad;
+}
+
+.portlet-default,
+.portlet-dark-blue,
+.portlet-default>.portlet-heading,
+.portlet-dark-blue>.portlet-heading {
+    border-color: #34495e;
+}
+
+.portlet-default>.portlet-heading,
+.portlet-dark-blue>.portlet-heading {
+    color: #fff;
+    background-color: #e84d1c;
+}
+
+.portlet-basic,
+.portlet-basic>.portlet-heading {
+    border-color: #333;
+}
+
+.portlet-basic>.portlet-heading {
+    border-bottom: 1px solid #333;
+    color: #333;
+    background-color: #fff;
+}
+
+@media(min-width:768px) {
+    .portlet {
+        margin-bottom: 0px;
+    }
+}
+
+.text-green {
+    color: lightgreen;
+}
+
+.text-orange {
+    color: #f39c12;
+}
+
+.text-red {
+    color: #e74c3c;
+}        
+
+.portlet .portlet-footer {
+    background: #e0e7e8;
+    padding-top: 4px;
+    padding-bottom: 47px;
+}
+
+.bootstrap.snippet {
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    width: 1150px;
+    right: 0px;
+}
+
+#makeOfferAmt {
+    margin-bottom: 35px;
+}
+
+img.img-responsive {
+    max-height: 100%;
+}
+
+button#sendChatMsg {
+    margin-top: 10px;
+}
+
+.verifyBody{
+    width:100%;
+    padding: 0 50px
+}
+
+.unreadMessage {
+    background-color: gainsboro;
+}
