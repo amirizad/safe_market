@@ -8,7 +8,21 @@ module.exports = (passport,db)=>{
 //Deserialize the user if id is found in cookie and is valid
     passport.deserializeUser(function(id, done) {
         db.Users.findById(id).then(function(user) {
-                done(null, user.dataValues.id);
+                done(null,{
+                    id:user.dataValues.id,
+                    username: user.dataValues.username,
+                    email: user.dataValues.email,
+                    age: user.dataValues.age,
+                    fname: user.dataValues.fname,
+                    lname: user.dataValues.lname,
+                    zip: user.dataValues.zip,
+                    phone : user.dataValues.phone,
+                    fname : user.dataValues.fname,
+                    lname : user.dataValues.lname,
+                    image_url: user.dataValues.user_image_url,
+                    verification_code : user.dataValues.verification_code,
+                    verified_seller : user.dataValues.verified_seller_ind
+                });
             }).catch(function(err) {
                 if (err) {
                     throw err;
