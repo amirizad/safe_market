@@ -6,8 +6,8 @@ import {connect} from 'react-redux';
 import MessagePreviewLayout from './message_preview_component';
 import {getMessages, enableChat} from './message_preview_actions';
 
-// const socket = io.connect(window.location.hostname);
-const socket = io.connect("localhost:3000");
+const socket = io.connect(window.location.hostname);
+//const socket = io.connect("localhost:3000");
 
 class MessagePreview extends Component{
     componentDidMount(){
