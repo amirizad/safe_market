@@ -22,7 +22,7 @@ const bcrypt = require('bcrypt');
 const flash = require('connect-flash');
 
 //Set up text messenger
-const SMS = new twilio("PN61ff35770737dd91dd9775829e0b1c91","4ff4866710e85ec36be256c55fbd4335");
+const SMS = new twilio("AC3fe097f0bf593e414f81876209067a73","4ff4866710e85ec36be256c55fbd4335");
 
 // Sets up the Express App
 // =============================================================

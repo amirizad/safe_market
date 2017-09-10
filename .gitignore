@@ -2,4 +2,4 @@
 /src
 /.idea
 /npm-debug.log
-bundle.js.map
+**/bundle.js.map
