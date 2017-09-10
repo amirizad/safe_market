@@ -1,11 +1,11 @@
 INSERT INTO `heroku_f8ff56462b848ef`.`users`
-(`username`,`email`,`password`,`role`,`age`,`zip`,`phone`,`fname`,`lname`,`createdAt`, `updatedAt`)
-VALUES('test1', 'test1@test1.com', '$2a$10$ehLyvD.vTC1fTZD5JfKMAu2lyv/Paqwf2KLYhD.7e6b2FqrcAq2OC', 'user', '34', '92691', '5625633567','first1','last1','2017-08-01 12:00:00','2017-08-01 12:00:00'),
-('test2', 'test21@test2.com', '$2a$10$d888l6s6bdlZ9edj6gli7.uNwQuQIUJaStupmp7CYiuJmEp1Ny7RS', 'user', '25', '92688', '5625633567','first2','last2','2017-08-01 12:00:00','2017-08-01 12:00:00'),
-('test3', 'test3@test3.com', '$2a$10$ehLyvD.vTC1fTZD5JfKMAu2lyv/Paqwf2KLYhD.7e6b2FqrcAq2OC', 'user', '52', '92692', '2135633567','first3','last3','2017-08-01 12:00:00','2017-08-01 12:00:00'),
-('test4', 'test4@test4.com', '$2a$10$ehLyvD.vTC1fTZD5JfKMAu2lyv/Paqwf2KLYhD.7e6b2FqrcAq2OC', 'user', '44', '92692', '9495111567','first4','last4','2017-08-01 12:00:00','2017-08-01 12:00:00'),
-('test5', 'test5@test5.com', '$2a$10$ehLyvD.vTC1fTZD5JfKMAu2lyv/Paqwf2KLYhD.7e6b2FqrcAq2OC', 'user', '19', '92694', '714563222','first5','last5','2017-08-01 12:00:00','2017-08-01 12:00:00');
-('Amir', 'info@amirizad.com', '$2a$10$062/xXKkL83U7/Fsq11OkObmsjG2y98FY4rszELfzORomOifV970W', 'user', '38', '92692', '714563222','','','2017-08-01 12:00:00','2017-08-01 12:00:00');
+(`username`,`email`,`password`,`role`,`age`,`zip`,`phone`,`user_image_url`,`fname`,`lname`,`createdAt`, `updatedAt`)
+VALUES('test1', 'test1@test1.com', '$2a$10$ehLyvD.vTC1fTZD5JfKMAu2lyv/Paqwf2KLYhD.7e6b2FqrcAq2OC', 'user', '34', '92691', '5625633567', 'https://cdn.filestackcontent.com/pHtjny1tQqOY44A0A40s','first1','last1','2017-08-01 12:00:00','2017-08-01 12:00:00'),
+('test2', 'test21@test2.com', '$2a$10$d888l6s6bdlZ9edj6gli7.uNwQuQIUJaStupmp7CYiuJmEp1Ny7RS', 'user', '25', '92688', '5625633567', 'https://cdn.filestackcontent.com/pHtjny1tQqOY44A0A40s','first2','last2','2017-08-01 12:00:00','2017-08-01 12:00:00'),
+('test3', 'test3@test3.com', '$2a$10$ehLyvD.vTC1fTZD5JfKMAu2lyv/Paqwf2KLYhD.7e6b2FqrcAq2OC', 'user', '52', '92692', '2135633567', 'https://cdn.filestackcontent.com/pHtjny1tQqOY44A0A40s','first3','last3','2017-08-01 12:00:00','2017-08-01 12:00:00'),
+('test4', 'test4@test4.com', '$2a$10$ehLyvD.vTC1fTZD5JfKMAu2lyv/Paqwf2KLYhD.7e6b2FqrcAq2OC', 'user', '44', '92692', '9495111567', 'https://cdn.filestackcontent.com/pHtjny1tQqOY44A0A40s','first4','last4','2017-08-01 12:00:00','2017-08-01 12:00:00'),
+('test5', 'test5@test5.com', '$2a$10$ehLyvD.vTC1fTZD5JfKMAu2lyv/Paqwf2KLYhD.7e6b2FqrcAq2OC', 'user', '19', '92694', '714563222', 'https://cdn.filestackcontent.com/pHtjny1tQqOY44A0A40s','first5','last5','2017-08-01 12:00:00','2017-08-01 12:00:00');
+('Amir', 'info@amirizad.com', '$2a$10$062/xXKkL83U7/Fsq11OkObmsjG2y98FY4rszELfzORomOifV970W', 'user', '38', '92692', '9494197049', 'https://www.dropbox.com/s/yr6zt3qn0xr5s9g/Amir1.jpg?raw=1','','','2017-08-01 12:00:00','2017-08-01 12:00:00');
 
 INSERT INTO `heroku_f8ff56462b848ef`.`items`
 (`title`,`description`,`category`,`item_image_url`,`quantity`,`price`,`unit_type`,`barter_ind`,`buyer_sale_confirm`,`seller_sale_confirm`,`seller_rating`,`UserId`,`createdAt`, `updatedAt`)
