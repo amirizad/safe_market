@@ -47382,23 +47382,13 @@
 	                        ),
 	                        _react2.default.createElement(
 	                            'option',
+	                            { value: 'appliance' },
+	                            'Appliance'
+	                        ),
+	                        _react2.default.createElement(
+	                            'option',
 	                            { value: 'automobile' },
 	                            'Automobile'
-	                        ),
-	                        _react2.default.createElement(
-	                            'option',
-	                            { value: 'furniture' },
-	                            'Furniture'
-	                        ),
-	                        _react2.default.createElement(
-	                            'option',
-	                            { value: 'service' },
-	                            'Service'
-	                        ),
-	                        _react2.default.createElement(
-	                            'option',
-	                            { value: 'toysgames' },
-	                            'Toys/Games'
 	                        ),
 	                        _react2.default.createElement(
 	                            'option',
@@ -47412,8 +47402,18 @@
 	                        ),
 	                        _react2.default.createElement(
 	                            'option',
-	                            { value: 'appliance' },
-	                            'Appliance'
+	                            { value: 'furniture' },
+	                            'Furniture'
+	                        ),
+	                        _react2.default.createElement(
+	                            'option',
+	                            { value: 'service' },
+	                            'Service'
+	                        ),
+	                        _react2.default.createElement(
+	                            'option',
+	                            { value: 'toys-games' },
+	                            'Toys/Games'
 	                        )
 	                    )
 	                ),
@@ -49241,67 +49241,7 @@
 	      { className: 'row margin-bottom-40' },
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'sidebar col-md-3 col-sm-5' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'sidebar-filter margin-bottom-25' },
-	          _react2.default.createElement(
-	            'h2',
-	            null,
-	            'Search categories'
-	          ),
-	          _react2.default.createElement('hr', null),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'checkbox-list' },
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              _react2.default.createElement('input', { type: 'checkbox' }),
-	              'Automobile'
-	            ),
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              _react2.default.createElement('input', { type: 'checkbox' }),
-	              'Furniture'
-	            ),
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              _react2.default.createElement('input', { type: 'checkbox' }),
-	              'Services'
-	            ),
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              _react2.default.createElement('input', { type: 'checkbox' }),
-	              'Toys/Games'
-	            ),
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              _react2.default.createElement('input', { type: 'checkbox' }),
-	              'Clothes'
-	            ),
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              _react2.default.createElement('input', { type: 'checkbox' }),
-	              'Electronics'
-	            ),
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              _react2.default.createElement('input', { type: 'checkbox' }),
-	              'Appliance'
-	            )
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'col-md-9 col-sm-7' },
+	        { className: 'col-md-12' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'content-search margin-bottom-20' },
@@ -49332,24 +49272,10 @@
 	            { className: 'row product-list' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'row list-view-sorting clearfix' },
+	              { className: 'list-view-sorting clearfix' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-2 col-sm-2 list-view' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: 'javascript:;' },
-	                  _react2.default.createElement('i', { className: 'fa fa-th-large' })
-	                ),
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: 'javascript:;' },
-	                  _react2.default.createElement('i', { className: 'fa fa-th-list' })
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'col-md-10 col-sm-10' },
+	                { className: 'col-md-12' },
 	                _react2.default.createElement(
 	                  'div',
 	                  { className: 'pull-right' },
@@ -49451,21 +49377,16 @@
 	            props.data.results.map(function (result, index) {
 	              return _react2.default.createElement(
 	                'div',
-	                { key: result.id, className: 'col-md-4 col-sm-6 col-xs-12' },
+	                { key: result.id, className: 'col-md-3' },
 	                _react2.default.createElement(
 	                  'div',
 	                  { className: 'product-item' },
 	                  _react2.default.createElement(
-	                    'h3',
+	                    'h4',
 	                    null,
 	                    _react2.default.createElement(
-	                      'a',
-	                      { href: 'shop-item.html' },
-	                      result.title
-	                    ),
-	                    _react2.default.createElement(
 	                      'span',
-	                      { style: { float: 'right' } },
+	                      null,
 	                      result.category
 	                    )
 	                  ),
@@ -49492,11 +49413,13 @@
 	                  ),
 	                  _react2.default.createElement(
 	                    'h3',
-	                    { style: { overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis" } },
+	                    null,
 	                    _react2.default.createElement(
 	                      'a',
-	                      { href: '#' },
-	                      result.description
+	                      { href: '#', 'data-toggle': 'modal', 'data-target': '#itemModal', onClick: function onClick() {
+	                          props.actions.sendListingData(props.data.results[index]);
+	                        } },
+	                      result.title
 	                    )
 	                  ),
 	                  _react2.default.createElement(
@@ -51677,7 +51600,7 @@
 	                { className: 'form-control', id: 'category', name: 'category', required: true, selected: props.data.category },
 	                _react2.default.createElement(
 	                  'option',
-	                  { value: '', disabled: '', defaultValue: true },
+	                  { disabled: '', defaultValue: true },
 	                  'Category'
 	                ),
 	                _react2.default.createElement(
@@ -51697,6 +51620,11 @@
 	                ),
 	                _react2.default.createElement(
 	                  'option',
+	                  { value: 'electronics' },
+	                  'Electronics'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
 	                  { value: 'furniture' },
 	                  'Furniture'
 	                ),
@@ -51704,11 +51632,6 @@
 	                  'option',
 	                  { value: 'service' },
 	                  'Service'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  { value: 'technology' },
-	                  'Technology'
 	                ),
 	                _react2.default.createElement(
 	                  'option',
