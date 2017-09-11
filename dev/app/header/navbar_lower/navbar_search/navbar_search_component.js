@@ -10,13 +10,13 @@ export default (props)=>{
                 <div className="input-group-btn search-panel">
                     <select id='category' className="btn dropdown-toggle" value={props.data.category}>
                     <option disabled defaultValue>Category</option>
+                    <option value="appliance">Appliance</option>
                     <option value="automobile">Automobile</option>
-                    <option value="furniture">Furniture</option>
-                    <option value="service">Service</option>
-                    <option value="toysgames">Toys/Games</option>
                     <option value="clothes">Clothes</option>
                     <option value="electronics">Electronics</option>
-                    <option value="appliance">Appliance</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="service">Service</option>
+                    <option value="toys-games">Toys/Games</option>
                     </select>
                 </div>
                 

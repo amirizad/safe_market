@@ -7,25 +7,8 @@ export default (props)=>{
       <div>
       {/* <!-- BEGIN SIDEBAR & CONTENT --> */}
       <div className="row margin-bottom-40">
-        {/* <!-- BEGIN SIDEBAR --> */}
-        <div className="sidebar col-md-3 col-sm-5">
-          <div className="sidebar-filter margin-bottom-25">
-            <h2>Search categories</h2>
-            <hr/>
-            <div className="checkbox-list">
-              <label><input type="checkbox"/>Automobile</label>
-              <label><input type="checkbox"/>Furniture</label>
-              <label><input type="checkbox"/>Services</label>
-              <label><input type="checkbox"/>Toys/Games</label>
-              <label><input type="checkbox"/>Clothes</label>
-              <label><input type="checkbox"/>Electronics</label>
-              <label><input type="checkbox"/>Appliance</label>
-            </div>
-          </div>
-        </div>
-        {/* <!-- END SIDEBAR --> */}
         {/* <!-- BEGIN CONTENT --> */}
-        <div className="col-md-9 col-sm-7">
+        <div className="col-md-12">
           <div className="content-search margin-bottom-20">
             <div className="row">
               <div className="col-md-6">
@@ -37,12 +20,8 @@ export default (props)=>{
             {(props.data.results.length > 0 ?
             <div>
             <div className="row product-list">
-              <div className="row list-view-sorting clearfix">
-              <div className="col-md-2 col-sm-2 list-view">
-                <a href="javascript:;"><i className="fa fa-th-large"></i></a>
-                <a href="javascript:;"><i className="fa fa-th-list"></i></a>
-              </div>
-              <div className="col-md-10 col-sm-10">
+              <div className="list-view-sorting clearfix">
+              <div className="col-md-12">
                 <div className="pull-right">
                   <label className="control-label">Show:</label>
                   <select className="form-control input-sm">
@@ -71,9 +50,9 @@ export default (props)=>{
             </div>
               {props.data.results.map((result, index)=>{
                   return(
-                      <div key={result.id} className="col-md-4 col-sm-6 col-xs-12">
+                      <div key={result.id} className="col-md-3">
                           <div className="product-item">
-                            <h3><a href="shop-item.html">{result.title}</a><span style={{float:'right'}}>{result.category}</span></h3>
+                            <h4><span>{result.category}</span></h4>
                               <div className="pi-img-wrapper">
                               <img src={result.item_image_url} className="img-responsive" alt={result.title}/>
                               <div>
@@ -81,7 +60,11 @@ export default (props)=>{
                                   <a data-toggle="modal" data-target="#itemModal" onClick={()=>{ props.actions.sendListingData(props.data.results[index])}} className="btn btn-default">View</a>
                               </div>
                               </div>
-                              <h3 style={{overflow:"hidden", whiteSpace:"nowrap", textOverflow:"ellipsis"}}><a href="#">{result.description}</a></h3>
+                              <h3>
+                                <a href="#" data-toggle="modal" data-target="#itemModal" onClick={()=>{ props.actions.sendListingData(props.data.results[index])}}>
+                                {result.title}
+                                </a>
+                              </h3>
                               <div className="pi-price">{result.price}</div>
                           </div>
                       </div>

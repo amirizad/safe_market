@@ -31,13 +31,13 @@ export default (props) => {
               <label className="col-md-2 control-label" htmlFor="frmcategory">Category <span className="require">*</span></label>
               <div className="col-md-10">
                 <select className="form-control" id="category" name="category" required selected={props.data.category}>
-                  <option value="" disabled="" defaultValue>Category</option>
+                  <option disabled="" defaultValue>Category</option>
                   <option value="appliance">Appliance</option>
                   <option value="automobile">Automobile</option>
                   <option value="clothes">Clothes</option>
+                  <option value="electronics">Electronics</option>
                   <option value="furniture">Furniture</option>
                   <option value="service">Service</option>
-                  <option value="technology">Technology</option>
                   <option value="toys-games">Toys/Games</option>
                 </select>
               </div>
