@@ -5,9 +5,8 @@ import React from 'react';
 export default (props)=>{
     return(
       <div>
-      {/* <!-- BEGIN SIDEBAR & CONTENT --> */}
+      {/* <!-- BEGIN CONTENT --> */}
       <div className="row margin-bottom-40">
-        {/* <!-- BEGIN CONTENT --> */}
         <div className="col-md-12">
           <div className="content-search margin-bottom-20">
             <div className="row">
