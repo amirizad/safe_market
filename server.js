@@ -53,7 +53,6 @@ const sessionStore = (process.env.PORT ? new MySQLStore({
     database:'chuckitdb'
 }));
 
-
 // START Configuring Express App
 // ========================================================================================
 app.use(logger("dev"));
@@ -103,11 +102,9 @@ app.use(function(error, req, res) {
     res.status(500).send('500: Internal Server Error');
 });
 
-
 // Starts DB and start listening to the server port
 db.sequelize.sync().then(()=>{
     server.listen(PORT,()=>{
         console.log('SERVER STARTED ON PORT ' + PORT);
     });
 });
-
